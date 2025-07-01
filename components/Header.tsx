@@ -33,10 +33,10 @@ const Header = ({ activeItem }: ActiveProp) => {
     }
 
     return (
-        <div className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && 'fixed top-0 left-0 bg-[#000000] z-[9999]'}`}>
+        <div className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && 'fixed top-0 left-0 bg-[#000] z-[9999]'}`}>
             <div className="hidden md:w-[90%] mx-auto justify-between md:flex items-center">
                 <div>
-                    <Link href={'/'}>
+                    <Link href='/'>
                         <h1 className='font-Inter text-3xl cursur-pointer'>
                             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent'>Prompt</span><span className="inline-block rotate-12 text-pink-500">B</span><span className="text-white underline">aazaar</span>
                         </h1>
@@ -64,7 +64,7 @@ const Header = ({ activeItem }: ActiveProp) => {
                 <>
                     <Link href="/">
                         <h1>
-                            <Link href={'/'}>
+                            <Link href='/'>
                                 <h1 className='font-Inter text-3xl cursur-pointer'>
                                     <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent'>Prompt</span><span className="inline-block rotate-12 text-pink-500">B</span><span className="text-white underline">aazaar</span>
                                 </h1>
