@@ -33,7 +33,7 @@ const StarRating = ({ rating }: starProps) => {
 const PromptCard = (props: Props) => {
   const rating = 4.5;
   return (
-    <div className="max-w-sm w-full mt-10 rounded-3xl overflow-hidden shadow-2xl relative group bg-gray-900">
+    <div className="sm:max-w-sm w-full mt-10 rounded-3xl overflow-hidden shadow-2xl relative group bg-gray-900">
       
       <div className="relative">
         <Image

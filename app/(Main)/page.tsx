@@ -1,10 +1,14 @@
 'use client'
 
-import Header from "@/components/Header"
+import Header from "@/components/Layout/Header"
 import PromptCard from "@/components/prompt/PromptCard"
 import About from "@/components/Routes/About"
+import Future from "@/components/Routes/Future"
 import Hero from "@/components/Routes/Hero"
+import Partners from "@/components/Routes/Partners"
 import BestSellers from "@/components/shop/BestSellers"
+import SellersBanner from "@/components/shop/SellersBanner" 
+import Footer from "@/components/Layout/Footer" 
 import { styles } from "@/utils/style"
 import Image from "next/image"
 import { useEffect, useState } from "react"
@@ -50,6 +54,13 @@ const page = (props: Props) => {
           </div>
           <br />
           <BestSellers />
+          <Future/>
+          <Partners/>
+          <SellersBanner/>
+          <br />
+          <br />
+          <hr className="text-[#ffffff23]"/>
+          <Footer/>
         </>
       </div>
     </div>

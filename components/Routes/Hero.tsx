@@ -44,7 +44,7 @@ const rowTwoImages = [
 
 const Hero = (props: Props) => {
     return (
-        <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gradient-to-br from-gray via-gray-950 to-pink-950">
+        <div className="w-full min-h-screen mt-7 flex flex-col items-center justify-center px-4 text-center bg-gradient-to-br from-gray via-gray-950 to-pink-950">
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-pink-500 animate-text-glow font-Monserrat drop-shadow-md">
                 <span className="block">Buy and Sell</span>
                 <span className="block">AI Prompts</span>
@@ -59,7 +59,7 @@ const Hero = (props: Props) => {
                 <span className="text-purple-600 font-semibold"> AI automation</span> prompts.
             </p>
 
-            <div className='md:mt-5'>
+            <div className='md:mt-10'>
                 <Image
                     src={line}
                     alt=''

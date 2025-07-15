@@ -32,7 +32,7 @@ const StarRating = ({ rating }: starProps) => {
 const SellerCard = (props: Props) => {
     const rating = 4.5;
     return (
-        <div className="max-w-xs w-full bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
+        <div className="md:max-w-xs w-full bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
             <div className="flex flex-col items-center p-6 text-center space-y-4">
                 <Image
                     src='/assets/user.png'

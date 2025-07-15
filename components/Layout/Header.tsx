@@ -33,7 +33,7 @@ const Header = ({ activeItem }: ActiveProp) => {
     }
 
     return (
-        <div className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && 'fixed top-0 left-0 bg-[#000] z-[9999]'}`}>
+        <div className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && 'fixed top-0 transition-all animation-duration-initial  left-0 bg-black/75 z-[9999]'}`}>
             <div className="hidden md:w-[90%] mx-auto justify-between md:flex items-center">
                 <div>
                     <Link href='/'>
@@ -83,7 +83,7 @@ const Header = ({ activeItem }: ActiveProp) => {
                 {
                     open && (
                         <div className='fixed md:hidden w-full h-screen top-0 left-0 z-[99999] bg-[unset]' id='screen' onClick={handleClose}>
-                            <div className="fixed  bg-black h-screen top-0 right-0 w-[40%] z-[9999]">
+                            <div className="fixed  bg-black/75 h-screen top-0 right-0 w-[40%] mr-[8px] z-[9999]">
                                 <div className="mt-20 p-5">
                                     <Navigations activeItem={activeItem} />
 
