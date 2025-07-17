@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter_Tight, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from '@clerk/nextjs'
+import { Toaster } from "react-hot-toast"
 
 const Inter = Inter_Tight({
   variable: "--font-inter",
@@ -23,12 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${Inter.variable} ${Montserrats.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${Inter.variable} ${Montserrats.variable} antialiased`}
+        >
+          <Toaster position="top-center" reverseOrder={false} />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
