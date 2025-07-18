@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navigations from './Navigations';
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiUser6Line } from "react-icons/ri";
@@ -12,14 +12,14 @@ import { UserProfile } from '@clerk/nextjs';
 
 type ActiveProp = {
     activeItem: number,
-    user: User | null
+    user: User | null,
+    isSellerExist: boolean,
 }
 
-const Header = ({ activeItem, user }: ActiveProp) => {
+const Header = ({ activeItem, user, isSellerExist }: ActiveProp) => {
 
     const [active, setActive] = useState(false)
     const [activeProfile, setActiveProfile] = useState(false)
-    const [isSellerExist, setIsSellerExist] = useState(false)
     const [open, setOpen] = useState(false)
 
     if (typeof window !== 'undefined') {
@@ -38,6 +38,7 @@ const Header = ({ activeItem, user }: ActiveProp) => {
             setOpen(!open)
         }
     }
+
 
     const handleProfile = () => {
         setActiveProfile(!activeProfile)
@@ -83,7 +84,7 @@ const Header = ({ activeItem, user }: ActiveProp) => {
                 activeProfile && (
                     <div className='w-full fixed h-screen overflow-hidden flex justify-center items-center top-0 left-0 bg-[#00000068] z-[9999]'>
                         <div className='w-min relative h-[90vh] overflow-y-scroll bg-white rounded-xl shadow'>
-                            <UserProfile  routing="hash"/>
+                            <UserProfile routing="hash" />
                             <RxCross1
                                 className='absolute text-black text-2xl top-[16px] lg:top-[30px] right-10 cursor-pointer'
                                 onClick={handleProfile}

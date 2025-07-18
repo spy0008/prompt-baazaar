@@ -75,13 +75,14 @@ const DropDown = ({ user, setOpen, handleProfile, isSellerExist }: Props) => {
                 </DropdownMenuItem>
 
                 <DropdownMenuItem
-                    className={`hover:bg-primary/10 rounded-2xl transition-colors cursor-pointer ${!isSellerExist && 'hidden'}`}
+                    className={`hover:bg-primary/10 rounded-2xl transition-colors ${!isSellerExist && 'hidden'}`}
                 >
-                    <Link href={"/my-shop"} className='flex w-full items-center'>
+                    <Link href={"/my-shop"} className='flex w-full items-center gap-3.5 cursor-pointer'>
+                        <TbSwitchVertical className='ml-1.5 size-6 text-black' />
                         <span className={`${styles.label} text-black font-semibold text-[16px]`}>
                             Switching to Seller
                         </span>
-                        <TbSwitchVertical className='text-2xl ml-2 text-black' />
+
                     </Link>
                 </DropdownMenuItem>
 
